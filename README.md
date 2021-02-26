@@ -1,1 +1,2 @@
 # Project-Tic-Tac-Toe
+This project will be a Tic Tac Toe game that will be playable from the browser.  The main goal will be to accomplish this using as little global code as possible and use modules or factory functions.
