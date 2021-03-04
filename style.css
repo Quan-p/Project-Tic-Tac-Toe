@@ -1,8 +1,8 @@
 #game-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     width: 100px;
     height: 70vh;
     justify-content: center;
@@ -14,4 +14,30 @@
     width: 100px;
     height: 100px;
     border: 1px solid black;
+    justify-items: center;
+    align-items: center;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
 }
