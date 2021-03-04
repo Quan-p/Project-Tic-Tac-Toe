@@ -1,0 +1,14 @@
+#game-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
