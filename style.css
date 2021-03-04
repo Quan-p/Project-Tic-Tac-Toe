@@ -3,8 +3,8 @@
     grid-template-columns: auto auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    width: 100vw;
-    height: 100vh;
+    width: 100px;
+    height: 70vh;
     justify-content: center;
     align-content: center;
     margin: 30px auto;
