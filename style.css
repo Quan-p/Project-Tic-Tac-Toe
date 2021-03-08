@@ -45,6 +45,25 @@
     transform: rotate(-45deg);
 }
 
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+}
+
+.cell.circle::before {
+    height: 90px;
+    width: 90px;
+}
+
+.cell.circle::after {
+    height: 63px;
+    width: 63px;
+    background-color: white;
+    
+}
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
