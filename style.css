@@ -30,7 +30,9 @@
 }
 
 .cell.x::before,
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:hover::before, 
+.board.x .cell:hover::after {
     content: '';
     height: 90px;
     width: 15px;
@@ -39,28 +41,34 @@
     background-color: black;
 }
 
-.cell.x::before {
+.cell.x::before, 
+.board.x .cell:hover::before {
     transform: rotate(45deg);
 }
 
-.cell.x::after {
+.cell.x::after, 
+.board.x .cell:hover::after {
     transform: rotate(-45deg);
 }
 
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after, 
+.board.circle .cell:hover::before, 
+.board.circle .cell:hover::after {
     content: '';
     border-radius: 50%;
     position: absolute;
     background-color: black;
 }
 
-.cell.circle::before {
+.cell.circle::before,
+.board.circle .cell:hover::before {
     height: 90px;
     width: 90px;
 }
 
-.cell.circle::after {
+.cell.circle::after,
+.board.circle .cell:hover::after {
     height: 63px;
     width: 63px;
     background-color: white;
