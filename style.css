@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+.cell:hover {
+    background-color: azure;
+}
+
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
