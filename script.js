@@ -3,12 +3,22 @@ const gameBoard = (() => {
     const showBoard = () => {
         document.getElementById('game-container').style.display = "grid";
     }
+
+    const cellElements = document.querySelectorAll('[data-cell]')
+    cellElements.forEach(cell => {
+        cellElements.addEventListener('click', handleClick, {once: true})
+    })
+
+    function handleClick(e) {
+        console.log('clicked')
+    }
     //allows outside modules to pull the board array
     const getBoard = () => {
         return board;
     }
 
     return {
+        handleClick,
         getBoard,
         showBoard,
     };
