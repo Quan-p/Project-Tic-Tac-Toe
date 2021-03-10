@@ -115,3 +115,28 @@
     border-bottom: none;
 }
 
+#resButton {
+    width: 100px;
+    height: 35px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.win-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .95);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    flex-direction: column;
+}
+
+.win-screen.show {
+    display: flex;
+}
