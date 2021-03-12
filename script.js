@@ -15,9 +15,7 @@ const gameBoard = (() => {
 const placeMark = (() => {
     const cellElements = document.querySelectorAll('[data-cell]');
     const board = document.getElementById('game-container');
-    cellElements.forEach(cell => {
-    cell.addEventListener('click', handleClick, {once: true})
-    })
+    
 
     const X_CLASS = 'x';
     const CIRCLE_CLASS ='circle';
@@ -29,6 +27,14 @@ const placeMark = (() => {
 
     function swapTurns() {
         circleTurn = !circleTurn;
+    }
+
+    function firstHover() {
+        circleTurn = false;
+        cellElements.forEach(cell => {
+            cell.addEventListener('click', handleClick, {once: true})
+        })
+        setBoardHoverClass();
     }
 
     function setBoardHoverClass() {
@@ -45,16 +51,18 @@ const placeMark = (() => {
         console.log('clicked');
         const cell = e.target;
         const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
-        placeMark(cell, currentClass)
+        placeMark(cell, currentClass);
         swapTurns();
         setBoardHoverClass();
     }
 
     return {
-        handleClick
+        handleClick,
+        firstHover
     }
 })(); 
 
+placeMark.firstHover();
 
 //gameBoard.showBoard()
 // const players = {
