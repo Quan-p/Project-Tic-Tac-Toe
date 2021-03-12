@@ -20,12 +20,22 @@ const placeMark = (() => {
 
     const X_CLASS = 'x';
     const CIRCLE_CLASS ='circle';
+    let circleTurn;
+
+    function placeMark(cell, currentClass) {
+        cell.classList.add(currentClass)
+    }
+
+    function swapTurns() {
+        circleTurn = !circleTurn;
+    }
     
     function handleClick(e) {
         console.log('clicked');
-        // const cell = e.target;
-        // const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
-        // placeMark(cell, currentClass)
+        const cell = e.target;
+        const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
+        placeMark(cell, currentClass)
+        swapTurns();
     }
 
     return {
