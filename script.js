@@ -28,7 +28,7 @@ const placeMark = (() => {
     function swapTurns() {
         circleTurn = !circleTurn;
     }
-
+//start game
     function firstHover() {
         circleTurn = false;
         cellElements.forEach(cell => {
@@ -54,6 +54,9 @@ const placeMark = (() => {
         placeMark(cell, currentClass);
         swapTurns();
         setBoardHoverClass();
+        if (checkWin(currentClass)) {
+            console.log('winner');
+        }
     }
 
     return {
@@ -61,6 +64,27 @@ const placeMark = (() => {
         firstHover
     }
 })(); 
+//Game logic here
+const gameController = (() => {
+    const WINNING_COMBINATIONS = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
+
+    function checkWin {
+
+    }
+
+    return {
+        checkWin
+    }
+})();
 
 placeMark.firstHover();
 
