@@ -12,11 +12,11 @@ const gameBoard = (() => {
     };
 })();
 
-const placeMark = (() => {
+//Game logic here
+const gameController = (() => {
+
     const cellElements = document.querySelectorAll('[data-cell]');
     const board = document.getElementById('game-container');
-    
-
     const X_CLASS = 'x';
     const CIRCLE_CLASS ='circle';
     let circleTurn;
@@ -48,24 +48,16 @@ const placeMark = (() => {
     }
     
     function handleClick(e) {
-        console.log('clicked');
         const cell = e.target;
         const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
         placeMark(cell, currentClass);
         swapTurns();
         setBoardHoverClass();
-        if (checkWin(currentClass)) {
+        if (winCheck(currentClass)) {
             console.log('winner');
         }
     }
 
-    return {
-        handleClick,
-        firstHover
-    }
-})(); 
-//Game logic here
-const gameController = (() => {
     const WINNING_COMBINATIONS = [
         [0, 1, 2],
         [3, 4, 5],
@@ -77,16 +69,23 @@ const gameController = (() => {
         [2, 4, 6]
     ]
 
-    function checkWin {
-
+    function winCheck(currentClass) {
+        return WINNING_COMBINATIONS.some(combination => {
+            return combination.every(index => {
+                return cellElements[index].classList.contains(currentClass)
+            })
+        })
     }
 
+    
     return {
-        checkWin
+        handleClick,
+        firstHover
     }
 })();
 
-placeMark.firstHover();
+gameController.firstHover();
+
 
 //gameBoard.showBoard()
 // const players = {
