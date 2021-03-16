@@ -65,9 +65,13 @@ const gameController = (() => {
         placeMark(cell, currentClass);
         if (winCheck(currentClass)) {
             endGame(false);
+        } else if (isdraw()) {
+            endGame(true)
+        } else {
+            swapTurns();
+            setBoardHoverClass();
         }
-        swapTurns();
-        setBoardHoverClass();
+        
         
     }
 
@@ -90,7 +94,6 @@ const gameController = (() => {
         })
     }
 
-    
     return {
         handleClick,
         firstHover
