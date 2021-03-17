@@ -49,6 +49,10 @@ const gameController = (() => {
         winningMessageElement.classList.add('show');
     }
 
+    function isDraw() {
+        
+    }
+
     function setBoardHoverClass() {
         board.classList.remove(X_CLASS);
         board.classList.remove(CIRCLE_CLASS);
@@ -65,14 +69,12 @@ const gameController = (() => {
         placeMark(cell, currentClass);
         if (winCheck(currentClass)) {
             endGame(false);
-        } else if (isdraw()) {
+        } else if (isDraw()) {
             endGame(true)
         } else {
             swapTurns();
             setBoardHoverClass();
         }
-        
-        
     }
 
     const WINNING_COMBINATIONS = [
