@@ -28,12 +28,13 @@
         <div data-winning-message-text>You win!</div>
         <button id='resButton' onclick='gameController.startGame()'>Restart</button>
     </div>
-    <button class='btn'>Human</button>
-    <button class='btn'>AI</button>
-    <button class='btn'>Human</button>
-    <button class='btn'>AI</button>
-    <button class='btn' onclick='gameBoard.showBoard()'>Play</button>
-    
+    <div id='gameButtons'>
+        <button type='button' class='btn'>Human</button>
+        <button type='button' class='btn'>AI</button>
+        <button type='button' class='btn'>Human</button>
+        <button type='button' class='btn'>AI</button>
+        <button type='button' class='btn' onclick='gameBoard.showBoard()'>Play</button>
+    </div>
 
   <script src="script.js"></script>
 </body>

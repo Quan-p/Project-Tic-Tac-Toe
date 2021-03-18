@@ -1,12 +1,11 @@
 const gameBoard = (() => {
     //const board = [];
     const showBoard = () => {
-        document.getElementById('game-container').style.display = "grid";
+        document.getElementById('game-container').style.display = 'grid';
+        document.getElementById('gameButtons').style.display = 'none';
     }
 
     //allows outside modules to pull the board array
-   
-
     return {
         showBoard,
     };
