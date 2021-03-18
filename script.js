@@ -31,12 +31,15 @@ const gameController = (() => {
         circleTurn = !circleTurn;
     }
 //start game
-    function firstHover() {
+    function startGame() {
         circleTurn = false;
         cellElements.forEach(cell => {
             cell.addEventListener('click', handleClick, {once: true})
+            cell.classList.remove(X_CLASS);
+            cell.classList.remove(CIRCLE_CLASS);
         })
         setBoardHoverClass();
+        winningMessageElement.classList.remove('show');
     }
 
     function endGame(draw) {
@@ -101,11 +104,11 @@ const gameController = (() => {
 
     return {
         handleClick,
-        firstHover
+        startGame
     }
 })();
 
-gameController.firstHover();
+gameController.startGame();
 
 
 //gameBoard.showBoard()
