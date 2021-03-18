@@ -10,7 +10,7 @@
     justify-items: center;
     align-items: center;
     margin: 30px auto;
-    /* display: none; */
+    display: none;
 }
 
 .cell {

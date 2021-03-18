@@ -1,14 +1,14 @@
 const gameBoard = (() => {
     //const board = [];
-    // const showBoard = () => {
-    //     document.getElementById('game-container').style.display = "grid";
-    // }
+    const showBoard = () => {
+        document.getElementById('game-container').style.display = "grid";
+    }
 
     //allows outside modules to pull the board array
    
 
     return {
-        //showBoard,
+        showBoard,
     };
 })();
 
@@ -40,6 +40,7 @@ const gameController = (() => {
         })
         setBoardHoverClass();
         winningMessageElement.classList.remove('show');
+        document.getElementById('game-container').style.display = 'none';
     }
 
     function endGame(draw) {
