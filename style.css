@@ -13,6 +13,23 @@
     display: none;
 }
 
+.btn {
+    width: 100px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 10px 5px;
+    background-color: grey;
+    transition-duration: 0.3s;
+    justify-content: center;
+    display: inline;
+}
+
+.btn:hover {
+    background-color: cornsilk;
+}
+
 .cell {
     width: 100px;
     height: 100px;
