@@ -32,6 +32,7 @@ const gameController = (() => {
 //start game
     function startGame() {
         circleTurn = false;
+        resClick = false;
         cellElements.forEach(cell => {
             cell.addEventListener('click', handleClick, {once: true})
             cell.classList.remove(X_CLASS);
@@ -39,7 +40,17 @@ const gameController = (() => {
         })
         setBoardHoverClass();
         winningMessageElement.classList.remove('show');
-        document.getElementById('game-container').style.display = 'none';
+
+        document.getElementsById('resButton').onclick = function() {
+            resClick = true;
+        };
+        if (resClick) {
+            document.getElementById('game-container').style.display = 'grid';
+
+        } else {
+            document.getElementById('game-container').style.display = 'none';
+        }
+        
     }
 
     function endGame(draw) {
