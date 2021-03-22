@@ -40,7 +40,7 @@ const gameController = (() => {
         })
         setBoardHoverClass();
         winningMessageElement.classList.remove('show');
-
+        //issue with line here, there is a mispell on elements but fixing it causes errors???
         document.getElementsById('resButton').onclick = function() {
             resClick = true;
         };
