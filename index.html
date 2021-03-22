@@ -29,10 +29,14 @@
         <button id='resButton' onclick='gameController.startGame()'>Restart</button>
     </div>
     <div id='gameButtons'>
-        <button type='button' class='btn'>Human</button>
-        <button type='button' class='btn'>AI</button>
-        <button type='button' class='btn'>Human</button>
-        <button type='button' class='btn'>AI</button>
+        <div class='playerSelect' id='leftPlayer'>
+            <button type='button' class='btn'>Human</button>
+            <button type='button' class='btn'>AI</button>
+        </div>
+        <div class='playerSelect' id='rightPlayer'>
+            <button type='button' class='btn'>Human</button>
+            <button type='button' class='btn'>AI</button>
+        </div>
         <button type='button' class='btn' onclick='gameBoard.showBoard()'>Play</button>
     </div>
 

@@ -15,10 +15,13 @@
 
 #gameButtons {
     display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .btn {
     width: 100px;
+    height: 25px;
     font-size: 20px;
     border-radius: 20px;
     border: none;
