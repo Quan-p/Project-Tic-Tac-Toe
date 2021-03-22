@@ -7,7 +7,7 @@ const gameBoard = (() => {
 
     //allows outside modules to pull the board array
     return {
-        showBoard,
+        showBoard
     };
 })();
 
@@ -119,15 +119,26 @@ const gameController = (() => {
     }
 })();
 
+
+
+const playerCheck = (() => {
+    function playerName() {
+        console.log('works')
+    }
+
+    return {
+        playerName
+    }
+})();
+
+playerCheck.playerName();
 gameController.startGame();
 
-
-//gameBoard.showBoard()
 // const players = {
 //     //cells selected by the players
 //     player1Selections: [],
 //     player2Selections: [],
-//     //tracking points, could possibly be done with a different counter
+//    0 //tracking points, could possibly be done with a different counter
 //     points1: [],
 //     points2: []
 
