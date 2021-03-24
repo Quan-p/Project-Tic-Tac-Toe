@@ -29,14 +29,13 @@ h1 {
     align-items: center;
 }
 
-#leftPlayer {
+#leftPlayer{
     display: flex;
     flex-direction: column;
     
 }
 
 #p1Name {
-    display: none;
     border-radius: 5px;
     border: 2px solid #ccc;
     font-size: 15px;
