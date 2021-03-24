@@ -122,21 +122,15 @@ const gameController = (() => {
 
 
 const playerCheck = (() => {
-    function oneName() {
-        document.getElementById('p1Name').style.display = 'flex';
-    }
-
     function twoName() {
         document.getElementById('p2Name').style.display = 'flex';
     }
 
     return {
-        oneName,
         twoName
     };
 })();
 gameController.startGame();
-playerCheck.oneName();
 playerCheck.twoName();
 
 
