@@ -34,6 +34,14 @@ h1 {
     flex-direction: column;
 }
 
+#p1Name {
+    display: none;
+}
+
+#p2Name {
+    display: none;
+}
+
 #rightPlayer {
     display: flex;
     flex-direction: column;

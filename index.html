@@ -30,14 +30,16 @@
     </div>
     <div id='gameButtons'>
         <div class='playerSelect' id='leftPlayer'>
-            <button type='button' class='btn' id='playerOne' onclick='playerCheck.playerName()'>Human</button>
+            <button type='button' class='btn' id='playerOne' onclick='playerCheck.oneName()'>Human</button>
+            <input type='text' id='p1Name'>
             <button type='button' class='btn'>AI</button>
         </div>
 
         <button type='button' class='btn' onclick='gameBoard.showBoard()'>Play</button>
         
         <div class='playerSelect' id='rightPlayer'>
-            <button type='button' class='btn' id='playerTwo'>Human</button>
+            <button type='button' class='btn' id='playerTwo' onclick='playerCheck.twoName()'>Human</button>
+            <input type='text' id='p2Name'>
             <button type='button' class='btn'>AI</button>
         </div>
     </div>

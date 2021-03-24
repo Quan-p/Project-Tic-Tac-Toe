@@ -122,17 +122,23 @@ const gameController = (() => {
 
 
 const playerCheck = (() => {
-    function playerName() {
-        console.log('works')
+    function oneName() {
+        document.getElementById('p1Name').style.display = 'flex';
+    }
+
+    function twoName() {
+        document.getElementById('p2Name').style.display = 'flex';
     }
 
     return {
-        playerName
-    }
+        oneName,
+        twoName
+    };
 })();
-
-playerCheck.playerName();
 gameController.startGame();
+playerCheck.oneName();
+playerCheck.twoName();
+
 
 // const players = {
 //     //cells selected by the players
