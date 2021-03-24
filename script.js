@@ -126,12 +126,20 @@ const playerCheck = (() => {
         document.getElementById('p2Name').style.display = 'flex';
     }
 
+    var playerOne;
+    function submitName() {
+        playerOne = document.getElementById('p1Name').value;
+        console.log(playerOne);
+    }
+
     return {
-        twoName
+        twoName,
+        submitName
     };
 })();
 gameController.startGame();
 playerCheck.twoName();
+playerCheck.submitName();
 
 
 // const players = {
