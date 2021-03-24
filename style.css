@@ -32,19 +32,26 @@ h1 {
 #leftPlayer {
     display: flex;
     flex-direction: column;
+    
 }
 
 #p1Name {
     display: none;
-}
-
-#p2Name {
-    display: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 15px;
 }
 
 #rightPlayer {
     display: flex;
     flex-direction: column;
+}
+
+#p2Name {
+    display: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 15px;
 }
 
 .btn {
