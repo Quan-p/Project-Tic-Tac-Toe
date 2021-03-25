@@ -30,27 +30,20 @@ const gameController = (() => {
         circleTurn = !circleTurn;
     }
 //start game
-    function startGame() {
+    function initGame() {
         circleTurn = false;
-        resClick = false;
         cellElements.forEach(cell => {
             cell.addEventListener('click', handleClick, {once: true})
             cell.classList.remove(X_CLASS);
             cell.classList.remove(CIRCLE_CLASS);
         })
         setBoardHoverClass();
-        winningMessageElement.classList.remove('show');
-        //issue with line here, there is a mispell on elements but fixing it causes errors???
-        document.getElementsById('resButton').onclick = function() {
-            resClick = true;
-        };
-        if (resClick) {
-            document.getElementById('game-container').style.display = 'grid';
+    }
 
-        } else {
-            document.getElementById('game-container').style.display = 'none';
-        }
-        
+    function startGame() {
+        winningMessageElement.classList.remove('show');
+        initGame();
+        document.getElementById('game-container').style.display = 'grid';
     }
 
     function endGame(draw) {
@@ -115,7 +108,8 @@ const gameController = (() => {
 
     return {
         handleClick,
-        startGame
+        startGame,
+        initGame
     }
 })();
 
@@ -137,8 +131,8 @@ const playerCheck = (() => {
         submitName
     };
 })();
-gameController.startGame();
-playerCheck.twoName();
+gameController.initGame();
+//playerCheck.twoName();
 playerCheck.submitName();
 
 
