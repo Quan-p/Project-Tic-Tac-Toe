@@ -51,7 +51,8 @@ h1 {
     display: none;
     border-radius: 5px;
     border: 2px solid #ccc;
-    font-size: 15px;
+    font-size: 40px;
+    width: 275px;
 }
 
 .btn {
@@ -193,7 +194,7 @@ h1 {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 35px;
+    font-size: 55px;
     flex-direction: column;
 }
 
