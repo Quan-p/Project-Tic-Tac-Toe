@@ -87,6 +87,7 @@ const gameController = (() => {
         }
     }
 
+
     const WINNING_COMBINATIONS = [
         [0, 1, 2],
         [3, 4, 5],
@@ -113,28 +114,29 @@ const gameController = (() => {
     }
 })();
 
-
-
 const playerCheck = (() => {
+    var playerTwo;
     function twoName() {
-        document.getElementById('p2Name').style.display = 'flex';
+        playerTwo = document.getElementById('p2Name').value;
+        console.log(playerTwo);
     }
 
     var playerOne;
-    function submitName() {
+    function oneName() {
         playerOne = document.getElementById('p1Name').value;
         console.log(playerOne);
     }
 
     return {
         twoName,
-        submitName
+        oneName
     };
 })();
-gameController.initGame();
-//playerCheck.twoName();
-playerCheck.submitName();
 
+
+gameController.initGame();
+playerCheck.twoName();
+playerCheck.oneName();
 
 // const players = {
 //     //cells selected by the players
