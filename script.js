@@ -12,16 +12,16 @@ const gameBoard = (() => {
 })();
 
 const playerCheck = (() => {
-    var pTwo;
+    var pTwo = 'Q';
+    var pOne = 'w';
+
     function twoName() {
         pTwo = document.getElementById('p2Name').value;
-        console.log(pTwo);
     }
 
-    var pOne;
-    function oneName() {
+    
+    function oneName([]) {
         pOne = document.getElementById('p1Name').value;
-        console.log(pOne);
     }
 
     return {
@@ -72,7 +72,8 @@ const gameController = (() => {
             winningMessageTextElement.innerText = 'Draw!'
         }
         else {
-            winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+            //winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+            winningMessageTextElement.innerText = `${circleTurn ? playerCheck.pTwo : playerCheck.pOne} Wins!`
         }
         winningMessageElement.classList.add('show');
     }
@@ -135,12 +136,7 @@ const gameController = (() => {
     }
 })();
 
-
-
-
 gameController.initGame(); 
-playerCheck.twoName();
-playerCheck.oneName();
 
 // const players = {
 //     //cells selected by the players
