@@ -11,6 +11,27 @@ const gameBoard = (() => {
     };
 })();
 
+const playerCheck = (() => {
+    var pTwo;
+    function twoName() {
+        pTwo = document.getElementById('p2Name').value;
+        console.log(pTwo);
+    }
+
+    var pOne;
+    function oneName() {
+        pOne = document.getElementById('p1Name').value;
+        console.log(pOne);
+    }
+
+    return {
+        twoName,
+        oneName,
+        pOne,
+        pTwo
+    };
+})();
+
 //Game logic here
 const gameController = (() => {
 
@@ -114,27 +135,10 @@ const gameController = (() => {
     }
 })();
 
-const playerCheck = (() => {
-    var playerTwo;
-    function twoName() {
-        playerTwo = document.getElementById('p2Name').value;
-        console.log(playerTwo);
-    }
-
-    var playerOne;
-    function oneName() {
-        playerOne = document.getElementById('p1Name').value;
-        console.log(playerOne);
-    }
-
-    return {
-        twoName,
-        oneName
-    };
-})();
 
 
-gameController.initGame();
+
+gameController.initGame(); 
 playerCheck.twoName();
 playerCheck.oneName();
 
