@@ -16,12 +16,12 @@ const playerCheck = (() => {
     
     function oneConfirm() {
         this.pOne = document.getElementById('p1Name').value;
-        document.getElementById('leftName').innerHTML = this.pOne;
+        document.getElementById('leftName').textContent += this.pOne;
         document.getElementById('leftName').style.visibility = 'visible';
     }
     function twoConfirm() {
         this.pTwo = document.getElementById('p2Name').value;
-        document.getElementById('rightName').innerHTML = this.pTwo;
+        document.getElementById('rightName').textContent += this.pTwo;
         document.getElementById('rightName').style.visibility = 'visible';
     }
 
