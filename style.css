@@ -76,7 +76,7 @@ p {
 
 .btn {
     width: 200px;
-    height: 50px;
+    height: 80px;
     font-size: 40px;
     font-family: 'Anton', sans-serif;
     border-radius: 20px;
@@ -200,10 +200,22 @@ p {
 }
 
 #resButton {
-    width: 100px;
-    height: 35px;
-    font-size: 25px;
+    width: 170px;
+    height: 80px;
+    font-size: 40px;
+    color: #E9D985;
+    background-color: #007991;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 10px 5px;
+    transition-duration: 0.3s;
+    font-family: 'Anton', sans-serif;
     cursor: pointer;
+}
+
+#resButton:hover {
+    background-color: #115471;
 }
 
 .win-screen {
@@ -216,7 +228,7 @@ p {
     background-color: rgba(34, 46, 80, .95);
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #E9D985;
     font-size: 55px;
     font-family: 'Anton', sans-serif;
     flex-direction: column;
