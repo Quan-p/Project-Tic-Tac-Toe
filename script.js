@@ -12,25 +12,26 @@ const gameBoard = (() => {
 })();
 
 const playerCheck = (() => {
-    var pTwo = 'Q';
-    var pOne = 'w';
-
-    function twoName() {
-        pTwo = document.getElementById('p2Name').value;
-    }
-
+    var pOne;
+    var pTwo;
     
-    function oneName([]) {
-        pOne = document.getElementById('p1Name').value;
+    function oneConfirm() {
+        this.pOne = document.getElementById('p1Name').value;
+    }
+    function twoConfirm() {
+        this.pTwo = document.getElementById('p2Name').value;
     }
 
     return {
-        twoName,
-        oneName,
+        oneConfirm,
+        twoConfirm,
         pOne,
         pTwo
     };
 })();
+// playerCheck.pOne;
+// playerCheck.pTwo;
+
 
 //Game logic here
 const gameController = (() => {
