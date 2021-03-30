@@ -1,6 +1,7 @@
 body {
     margin: 0;
     height: 100vh;;
+    background-color: #007991;
 }
 
 h1 {
@@ -45,6 +46,7 @@ h1 {
 #rightPlayer {
     display: flex;
     flex-direction: column;
+    justify-items: center;
 }
 
 #p2Name {
@@ -62,7 +64,8 @@ h1 {
     border: none;
     outline: none;
     margin: 10px 5px;
-    background-color: grey;
+    background-color: #E9D985;
+    color: #007991;
     transition-duration: 0.3s;
     justify-content: center;
     display: inline;
@@ -70,7 +73,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: cornsilk;
+    background-color: #222E50;
 }
 
 .cell {
@@ -86,20 +89,23 @@ h1 {
 }
 
 .cell.x::before,
-.cell.x::after,
+.cell.x::after {
+    background-color: #115471;
+}
+
 .cell.circle::before,
 .cell.circle::after {
-    background-color: black;
+    background-color: #EDDF9a;
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
-    background-color: lightgray;
+    background-color: #BCD8C1;
 }
 
 .board.circle .cell:not(.x):not(.circle):hover::before,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-    background-color: lightgray;
+    background-color: #BCD8C1;
 }
 
 .cell.x::before,
@@ -142,8 +148,7 @@ h1 {
 .board.circle .cell:not(.x):not(.circle):hover::after {
     height: 63px;
     width: 63px;
-    background-color: white;
-    
+    background-color: #007991;
 }
 
 .cell.x,
@@ -189,7 +194,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .95);
+    background-color: rgba(34, 46, 80, .95);
     justify-content: center;
     align-items: center;
     color: white;
