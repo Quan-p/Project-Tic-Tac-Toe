@@ -30,17 +30,17 @@
     </div>    
     <div id='gameButtons'>
         <form class='playerSelect' id='leftPlayer'>
-            <p class='required' id='leftReq'>Required:</p>
+            <p class='playerName' id='leftName'></p>
             <input type='text' id='p1Name' placeholder='Player One'>
-            <button type='submit' class='btn' id='playerOne' onclick='playerCheck.oneConfirm()'>Confirm</button>
+            <button type='button' class='btn' id='playerOne' onclick='playerCheck.oneConfirm()'>Confirm</button>
         </form>
 
         <button type='button' class='btn' onclick='gameBoard.showBoard()'>Play</button>
         
         <form class='playerSelect' id='rightPlayer'>
-            <p class='required' id='rightReq'>Required:</p>
+            <p class='playerName' id='rightName'></p>
             <input type='text' id='p2Name' placeholder='Player Two'>
-            <button type='submit' class='btn' id='playerTwo' onclick='playerCheck.twoConfirm()'>Confirm</button>
+            <button type='button' class='btn' id='playerTwo' onclick='playerCheck.twoConfirm()'>Confirm</button>
         </form>    
     </div>
 
