@@ -1,14 +1,7 @@
 const gameBoard = (() => {
-    //const board = [];
     const showBoard = () => {
-        
-        if ((typeof playerCheck.pOne === 'string') && (typeof playerCheck.pTwo === 'string')) {
-            document.getElementById('game-container').style.display = 'grid';
-            document.getElementById('gameButtons').style.display = 'none';
-        } else {
-            document.getElementById('leftReq').style.visibility = 'visible';
-            document.getElementById('rightReq').style.visibility = 'visible';
-        }
+        document.getElementById('game-container').style.display = 'grid';
+        document.getElementById('gameButtons').style.display = 'none';
     }
 
     //allows outside modules to pull the board array
@@ -18,8 +11,8 @@ const gameBoard = (() => {
 })();
 
 const playerCheck = (() => {
-    var pOne;
-    var pTwo;
+    var pOne = 'Player One';
+    var pTwo = 'Player Two';
     
     function oneConfirm() {
         this.pOne = document.getElementById('p1Name').value;

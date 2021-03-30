@@ -27,21 +27,21 @@
     <div class='win-screen' id='winScreen'>
         <div data-winning-message-text>You win!</div>
         <button id='resButton' onclick='gameController.startGame()'>Restart</button>
-    </div>
+    </div>    
     <div id='gameButtons'>
-        <div class='playerSelect' id='leftPlayer'>
+        <form class='playerSelect' id='leftPlayer'>
             <p class='required' id='leftReq'>Required:</p>
             <input type='text' id='p1Name' placeholder='Player One'>
-            <button type='button' class='btn' id='playerOne' onclick='playerCheck.oneConfirm()'>Confirm</button>
-        </div>
+            <button type='submit' class='btn' id='playerOne' onclick='playerCheck.oneConfirm()'>Confirm</button>
+        </form>
 
         <button type='button' class='btn' onclick='gameBoard.showBoard()'>Play</button>
         
-        <div class='playerSelect' id='rightPlayer'>
+        <form class='playerSelect' id='rightPlayer'>
             <p class='required' id='rightReq'>Required:</p>
             <input type='text' id='p2Name' placeholder='Player Two'>
-            <button type='button' class='btn' id='playerTwo' onclick='playerCheck.twoConfirm()'>Confirm</button>
-        </div>
+            <button type='submit' class='btn' id='playerTwo' onclick='playerCheck.twoConfirm()'>Confirm</button>
+        </form>    
     </div>
 
   <script src="script.js"></script>
