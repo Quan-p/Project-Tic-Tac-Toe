@@ -1,8 +1,14 @@
 const gameBoard = (() => {
     //const board = [];
     const showBoard = () => {
-        document.getElementById('game-container').style.display = 'grid';
-        document.getElementById('gameButtons').style.display = 'none';
+        
+        if ((typeof playerCheck.pOne === 'string') && (typeof playerCheck.pTwo === 'string')) {
+            document.getElementById('game-container').style.display = 'grid';
+            document.getElementById('gameButtons').style.display = 'none';
+        } else {
+            document.getElementById('leftReq').style.visibility = 'visible';
+            document.getElementById('rightReq').style.visibility = 'visible';
+        }
     }
 
     //allows outside modules to pull the board array
@@ -29,9 +35,6 @@ const playerCheck = (() => {
         pTwo
     };
 })();
-// playerCheck.pOne;
-// playerCheck.pTwo;
-
 
 //Game logic here
 const gameController = (() => {
@@ -73,7 +76,6 @@ const gameController = (() => {
             winningMessageTextElement.innerText = 'Draw!'
         }
         else {
-            //winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
             winningMessageTextElement.innerText = `${circleTurn ? playerCheck.pTwo : playerCheck.pOne} Wins!`
         }
         winningMessageElement.classList.add('show');
